@@ -11,7 +11,7 @@
 <label>Existing titles</label><br>
 <% Title.all.each do |title|%>
 <% title_id = "title_#{title.id}"%>
-<input type="checkbox" id="<%= title_id %>"name="figure[title_ids][]"><%= title.name %></input>
+<input type="checkbox" id="<%= title_id %>" name="figure[title_ids][]"><%= title.name %></input>
 <% end %>
 <br></br>
 
