@@ -6,7 +6,7 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.create(name: params[:figure][:name])
     @figure.title_ids = params[:figure][:title_ids] if params[:figure][:title_ids]
-    @figure.landmark_id = params[:figure][:landmark_ids] if params[:figure][:landmark_ids]
+    @figure.landmark_ids = params[:figure][:landmark_ids] if params[:figure][:landmark_ids]
     # binding.pry
   end
 
