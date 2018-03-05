@@ -6,7 +6,7 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.create(name: params[:figure][:name])
     @figure.title_ids = params[:figure][:title_ids]
-    @figure.landmarks << params[:figure][:landmark]
+    @figure.landmarks << params[:landmark][:name]
     # binding.pry
   end
 
