@@ -15,7 +15,10 @@ class FiguresController < ApplicationController
     if !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.create(name: params[:landmark][:name])
     end
-    # binding.pry
+  end
+
+  get '/figures' do
+    erb :'/figures/index'
   end
 
 end
